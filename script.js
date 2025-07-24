@@ -7,7 +7,7 @@ class Person {
 
   introduce() {
     console.log(
-        "my school name is ${this.school}, am studying ${this.course}
+        "my school name is ${this.school}, am studying ${this.course}"
         );
   }
 }
