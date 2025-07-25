@@ -1,54 +1,54 @@
 
 class Person {
-  constructor(school, course) {
-    this.school = school;
-    this.course = course;
+  constructor(name, age) {
+    this.name = name
+    this.age = age;
   }
 
   introduce() {
     console.log(
-        "my school name is ${this.school}, am studying ${this.course}"
+        "my name is ${this.name}, am ${this.age} years old"
         );
   }
 }
 
 
 class Student extends Person {
-  constructor(school, course, faculty, session) {
-    super(school, course); 
-    this.faculty = faculty;
-    this.session = session;
+  constructor (name, age, eyeColor, height) {
+    super(name, age); 
+    this.eyeColor = eyeColor;
+    this.height = height;
       }
 
   study() {
     console.log(
-      "I school in ${this.school} am studying ${this.course} in the ${this.faculty} in ${this.session}."
+      "my name is ${this.school} am ${this.age} years old, with ${this.eyeColor} and ${this.height} tall."
     );
   }
 }
 
 class Teacher extends Person {
-    constructor(school, course, department, awards) {
-        super(school,course);
-        this.department = department;
+    constructor(name, age, subject, awards) {
+        super(name,age);
+        this.subject = subject;
         this.awards = awards
         
     }
     
 teach() {
     console.log(
-     "The teacher of this ${this.school} is teaching ${this.course} in ${this.department} with ${this.award}"
-    )
+     "my name is ${this.name} am ${this.age} years old, i teach ${this.subject} with ${this.award}."
+    );
 }
 }
 
-const person = new person ("UNN", "accounting");
+const person = new person ("Blessing", "15");
 person.introduce();
 
-const student = new student("Lasu", "Mass communication", "arts", 3);
+const student = new student("Anna", "17", "white", 3);
 student.introduce();
 student.study();
 
-const teacher = new teacher("yaba tech", "electricals", "enginnering", 7); 
+const teacher = new teacher("Daniel", "25", "Biology", 7); 
 teacher.introduce();
 teacher.teach();
