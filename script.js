@@ -1,54 +1,54 @@
 
-class Person {
+class Person{
   constructor(name, age) {
-    this.name = name
+    this.name = name;
     this.age = age;
-  }
+ 
+ }
 
-  introduce() {
-    console.log(
-        "my name is ${this.name}, am ${this.age} years old"
-        );
-  }
+ introduction() {
+  console.log(
+    'Hi, my name is ${this.name} and I am ${this.age} years old.'
+  );
+ }
 }
 
+class Students extends Person{
+  constructor(name, age, state, height) {
+    super(name, age);
+    this.state = state;
+    this.height = this.height;
+  }
 
-class Student extends Person {
-  constructor (name, age, eyeColor, height) {
-    super(name, age); 
-    this.eyeColor = eyeColor;
-    this.height = height;
-      }
+state() {
+  console.log(
+  'Am ${this.name} am from ${this.state} am ${this.height} tall.'
+  );
+}
+}
 
-  study() {
+class Teacher extends Person{
+  constructor(name, age, subject, awards) {
+    super(name, age);
+    this.subject = subject;
+    this.awards = this.awards;
+  }
+
+  teacher() {
     console.log(
-      "my name is ${this.school} am ${this.age} years old, with ${this.eyeColor} and ${this.height} tall."
+      ' Am ${this.name} I teach ${this.subject} with ${this.awards} awards'
     );
   }
 }
+const person = new Person("Anna", 12);
+person.introduction();
 
-class Teacher extends Person {
-    constructor(name, age, subject, awards) {
-        super(name,age);
-        this.subject = subject;
-        this.awards = awards
-        
-    }
-    
-teach() {
-    console.log(
-     "my name is ${this.name} am ${this.age} years old, i teach ${this.subject} with ${this.award}."
-    );
-}
-}
+const students = new Students("Daniel", 14, "Imo", 3);
+students.introduction();
+students.state();
 
-const person = new person ("Blessing", "15");
-person.introduce();
+const teacher = new Teacher("John", 34, "maths", 4);
+teacher.introduction();
+  teacher.teacher();
 
-const student = new student("Anna", "17", "white", 3);
-student.introduce();
-student.study();
 
-const teacher = new teacher("Daniel", "25", "Biology", 7); 
-teacher.introduce();
-teacher.teach();
